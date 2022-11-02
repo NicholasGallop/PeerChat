@@ -42,6 +42,8 @@ let init = async () => {
 let handleUserLeft = (MemberId) => {
     document.getElementById('user-2').style.display = 'none'
     document.getElementById('user-1').classList.remove('smallFrame')
+  leaveChannel()
+  window.location = 'lobby.html'
 }
 
 let handleMessageFromPeer = async (message, MemberId) => {
