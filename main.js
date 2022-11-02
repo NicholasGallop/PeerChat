@@ -78,10 +78,10 @@ let createPeerConnection = async (MemberId) => {
     document.getElementById('user-2').srcObject = remoteStream
     document.getElementById('user-2').style.display = 'block'
 
-    if(!localStream){
+    //if(!localStream){
         localStream = await navigator.mediaDevices.getUserMedia({video:true, audio:false})
         document.getElementById('user-1').srcObject = localStream
-    }
+    //}
 
     localStream.getTracks().forEach((track) => {
         peerConnection.addTrack(track, localStream)
