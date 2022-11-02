@@ -129,8 +129,8 @@ let addAnswer = async (answer) => {
 }
 
 let leaveChannel = async() => {
-  await channel.leave().then(console.log('left'))
-  await client.logout().then(console.log('logdOut'))
+  await channel.leave()
+  await client.logout()
 }
 
 let toggleCamera = async() => {
